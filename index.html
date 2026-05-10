@@ -31,151 +31,151 @@
         /* Custom Scrollbar hide */
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar { width: 8px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.25); border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.4); }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-200 font-sans selection:bg-indigo-500/30 flex overflow-hidden min-h-screen">
+<body class="bg-slate-950 text-slate-200 font-sans selection:bg-indigo-500/30 flex overflow-hidden h-screen">
 
     <!-- Background Glow Effects -->
     <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none"></div>
 
     <!-- Left Sidebar -->
-    <nav class="w-20 lg:w-64 border-r border-white/10 bg-white/[0.02] backdrop-blur-xl flex flex-col justify-between py-6 z-10 transition-all duration-300">
+    <nav id="sidebar" class="w-20 lg:w-64 border-r border-white/10 bg-white/[0.02] backdrop-blur-xl flex flex-col justify-between py-6 z-10 transition-all duration-300 relative">
         <div>
-            <div class="flex items-center justify-center lg:justify-start lg:px-6 mb-10">
-                <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(99,102,241,0.4)]">
+            <div class="flex items-center justify-center lg:justify-start lg:px-6 mb-10 overflow-hidden">
+                <div class="w-10 h-10 shrink-0 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(99,102,241,0.4)]">
                     <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
                 </div>
-                <span class="ml-3 font-bold text-xl tracking-tight hidden lg:block text-white">LifeOS<span class="text-indigo-400">Agent</span></span>
+                <span class="ml-3 font-bold text-xl tracking-tight hidden lg:block text-white whitespace-nowrap sidebar-label">LifeOS<span class="text-indigo-400">Agent</span></span>
             </div>
             
             <ul class="space-y-2 px-3">
                 <li>
                     <a href="#" class="flex items-center px-4 py-3 rounded-xl transition-all duration-200 group bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                        <i data-lucide="home" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
-                        <span class="ml-3 font-medium text-sm hidden lg:block">Dashboard</span>
+                        <i data-lucide="home" class="w-5 h-5 group-hover:scale-110 transition-transform shrink-0"></i>
+                        <span class="ml-3 font-medium text-sm hidden lg:block sidebar-label whitespace-nowrap">Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center px-4 py-3 rounded-xl transition-all duration-200 group text-slate-400 hover:bg-white/5 hover:text-white">
-                        <i data-lucide="target" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
-                        <span class="ml-3 font-medium text-sm hidden lg:block">Goals Engine</span>
+                        <i data-lucide="target" class="w-5 h-5 group-hover:scale-110 transition-transform shrink-0"></i>
+                        <span class="ml-3 font-medium text-sm hidden lg:block sidebar-label whitespace-nowrap">Goals Engine</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center px-4 py-3 rounded-xl transition-all duration-200 group text-slate-400 hover:bg-white/5 hover:text-white">
-                        <i data-lucide="activity" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
-                        <span class="ml-3 font-medium text-sm hidden lg:block">Simulations</span>
+                        <i data-lucide="activity" class="w-5 h-5 group-hover:scale-110 transition-transform shrink-0"></i>
+                        <span class="ml-3 font-medium text-sm hidden lg:block sidebar-label whitespace-nowrap">Simulations</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center px-4 py-3 rounded-xl transition-all duration-200 group text-slate-400 hover:bg-white/5 hover:text-white">
-                        <i data-lucide="brain-circuit" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
-                        <span class="ml-3 font-medium text-sm hidden lg:block">Memory Logs</span>
+                        <i data-lucide="brain-circuit" class="w-5 h-5 group-hover:scale-110 transition-transform shrink-0"></i>
+                        <span class="ml-3 font-medium text-sm hidden lg:block sidebar-label whitespace-nowrap">Memory Logs</span>
                     </a>
                 </li>
                 <li>
                     <a href="#" class="flex items-center px-4 py-3 rounded-xl transition-all duration-200 group text-slate-400 hover:bg-white/5 hover:text-white">
-                        <i data-lucide="message-square" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
-                        <span class="ml-3 font-medium text-sm hidden lg:block">Agent Chat</span>
+                        <i data-lucide="message-square" class="w-5 h-5 group-hover:scale-110 transition-transform shrink-0"></i>
+                        <span class="ml-3 font-medium text-sm hidden lg:block sidebar-label whitespace-nowrap">Agent Chat</span>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="px-3">
             <a href="#" class="flex items-center px-4 py-3 rounded-xl transition-all duration-200 group text-slate-400 hover:bg-white/5 hover:text-white">
-                <i data-lucide="settings" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
-                <span class="ml-3 font-medium text-sm hidden lg:block">Settings</span>
+                <i data-lucide="settings" class="w-5 h-5 group-hover:scale-110 transition-transform shrink-0"></i>
+                <span class="ml-3 font-medium text-sm hidden lg:block sidebar-label whitespace-nowrap">Settings</span>
             </a>
-            <div class="mt-4 p-4 rounded-xl bg-white/5 border border-white/10 hidden lg:block">
-                <p class="text-xs text-slate-400 mb-2">Agent Status</p>
-                <div class="flex items-center space-x-2">
-                    <span class="relative flex h-3 w-3">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                    </span>
-                    <span class="text-sm font-medium text-emerald-400">Autonomous</span>
-                </div>
-            </div>
+            
+            <!-- Collapse Button -->
+            <button onclick="toggleSidebar()" class="mt-2 w-full flex items-center px-4 py-3 rounded-xl text-slate-500 hover:bg-white/5 hover:text-white transition">
+                <i data-lucide="panel-left-close" id="sidebarToggleIcon" class="w-5 h-5 shrink-0"></i>
+                <span class="ml-3 font-medium text-sm hidden lg:block sidebar-label whitespace-nowrap">Collapse</span>
+            </button>
         </div>
     </nav>
 
     <!-- Central Dashboard -->
-    <main class="flex-1 overflow-y-auto p-6 lg:p-10 z-10 custom-scrollbar">
-        <header class="mb-8 flex justify-between items-end">
-            <div>
-                <h1 class="text-3xl font-bold text-white mb-2">Welcome back, Sid.</h1>
-                <p class="text-slate-400">Your AI chief-of-staff is actively monitoring your goals.</p>
-            </div>
-            <div class="text-right hidden md:flex flex-col items-end gap-3">
-                <!-- Currency Toggle -->
-                <div class="flex bg-white/5 border border-white/10 rounded-lg p-1 w-fit" id="currencyToggle">
-                    <button onclick="setCurrency('INR')" id="btn-INR" class="px-3 py-1 text-xs font-medium rounded-md transition bg-indigo-500 text-white shadow-md">INR</button>
-                    <button onclick="setCurrency('USD')" id="btn-USD" class="px-3 py-1 text-xs font-medium rounded-md transition text-slate-400 hover:text-white">USD</button>
-                </div>
-                
-                <!-- Active Goal Focus -->
-                <div class="relative" id="goalContainer">
-                    <p class="text-sm text-slate-400 mb-1 text-left">Active Goal Focus</p>
-                    <div class="inline-flex items-center space-x-2 px-3 py-2 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-300">
-                        <i data-lucide="target" class="w-4 h-4 text-indigo-400"></i>
-                        <input 
-                            type="text"
-                            id="goalInput"
-                            value="Buy ₹2.5Cr House in Gurgaon"
-                            onfocus="document.getElementById('goalSuggestions').classList.remove('hidden')"
-                            onblur="setTimeout(() => document.getElementById('goalSuggestions').classList.add('hidden'), 200)"
-                            oninput="updateGoal(this.value)"
-                            class="bg-transparent border-none outline-none text-sm font-medium text-white w-48 placeholder:text-indigo-400/50 truncate"
-                            placeholder="Enter a goal..."
-                        >
-                        <i data-lucide="edit-2" class="w-3.5 h-3.5 text-indigo-400/50 cursor-pointer shrink-0"></i>
-                    </div>
+    <main class="flex-1 overflow-y-auto p-4 lg:p-8 z-10 custom-scrollbar">
+        <!-- Re-organized Header -->
+        <header class="mb-6 flex justify-between items-start lg:items-end flex-col lg:flex-row gap-4">
+            <div class="w-full lg:w-auto">
+                <div class="flex items-center flex-wrap gap-3 mb-2">
+                    <h1 class="text-2xl lg:text-3xl font-bold text-white whitespace-nowrap">Goal Focus:</h1>
                     
-                    <!-- Goal Suggestions Dropdown -->
-                    <div id="goalSuggestions" class="hidden absolute top-full right-0 mt-2 w-full min-w-[200px] bg-slate-900 border border-slate-700 rounded-lg shadow-xl z-50 p-1.5 overflow-hidden">
-                        <!-- Populated by JS -->
+                    <div class="relative" id="goalContainer">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-300">
+                            <i data-lucide="target" class="w-5 h-5 text-indigo-400"></i>
+                            <input 
+                                type="text"
+                                id="goalInput"
+                                value="Buy ₹2.5Cr House in Gurgaon"
+                                onfocus="document.getElementById('goalSuggestions').classList.remove('hidden')"
+                                onblur="setTimeout(() => document.getElementById('goalSuggestions').classList.add('hidden'), 200)"
+                                oninput="updateGoal(this.value)"
+                                class="bg-transparent border-none outline-none text-lg lg:text-xl font-bold text-white w-56 lg:w-72 placeholder:text-indigo-400/50 truncate"
+                                placeholder="Enter a goal..."
+                            >
+                            <i data-lucide="edit-2" class="w-4 h-4 text-indigo-400/50 cursor-pointer shrink-0"></i>
+                        </div>
+                        
+                        <!-- Goal Suggestions Dropdown -->
+                        <div id="goalSuggestions" class="hidden absolute top-full left-0 mt-2 w-full min-w-[200px] bg-slate-900 border border-slate-700 rounded-lg shadow-xl z-50 p-1.5 overflow-hidden">
+                            <!-- Populated by JS -->
+                        </div>
                     </div>
+                </div>
+                <p class="text-slate-400 text-sm lg:text-base">Welcome back, Sid. Your AI chief-of-staff is tracking your trajectory.</p>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <!-- Currency Toggle -->
+                <div class="flex bg-white/5 border border-white/10 rounded-lg p-1" id="currencyToggle">
+                    <button onclick="setCurrency('INR')" id="btn-INR" class="px-4 py-1.5 text-xs font-semibold rounded-md transition bg-indigo-500 text-white shadow-md">INR</button>
+                    <button onclick="setCurrency('USD')" id="btn-USD" class="px-4 py-1.5 text-xs font-semibold rounded-md transition text-slate-400 hover:text-white">USD</button>
                 </div>
             </div>
         </header>
 
-        <!-- Top Stats Row -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md flex flex-col justify-between hover:bg-white/[0.05] transition-colors cursor-default">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-slate-400 text-sm font-medium">Financial Health Score</h3>
-                    <div class="p-2 bg-white/5 rounded-lg border border-white/5"><i data-lucide="activity" class="w-5 h-5 text-emerald-400"></i></div>
+        <!-- Top Stats Row (Reduced padding, 2x2 grid on mobile) -->
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md flex flex-col justify-between hover:bg-white/[0.05] transition-colors cursor-default col-span-1">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-slate-400 text-[11px] lg:text-xs font-semibold uppercase tracking-wider">Financial Health</h3>
+                    <div class="p-1.5 bg-white/5 rounded-lg border border-white/5"><i data-lucide="activity" class="w-4 h-4 text-emerald-400"></i></div>
                 </div>
                 <div>
-                    <div class="text-2xl font-bold text-white mb-1">78/100</div>
+                    <div class="text-xl lg:text-2xl font-bold text-white mb-1">78/100</div>
                     <div class="text-xs font-medium flex items-center space-x-1 text-emerald-400">
                         <i data-lucide="trending-up" class="w-3 h-3"></i><span>+4 pts</span>
                     </div>
                 </div>
             </div>
             
-            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md flex flex-col justify-between hover:bg-white/[0.05] transition-colors cursor-default">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-slate-400 text-sm font-medium">Affordability Rating</h3>
-                    <div class="p-2 bg-white/5 rounded-lg border border-white/5"><i data-lucide="alert-circle" class="w-5 h-5 text-amber-400"></i></div>
+            <!-- Risk Card with Dynamic Styling -->
+            <div id="riskCard" class="p-4 rounded-2xl bg-amber-900/10 border border-amber-500/20 backdrop-blur-md flex flex-col justify-between transition-colors cursor-default col-span-1">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 id="riskLabel" class="text-amber-500/80 text-[11px] lg:text-xs font-semibold uppercase tracking-wider">Risk Level</h3>
+                    <div id="riskIconBg" class="p-1.5 bg-amber-500/10 rounded-lg border border-amber-500/20"><i data-lucide="alert-circle" id="riskIcon" class="w-4 h-4 text-amber-400"></i></div>
                 </div>
                 <div>
-                    <div class="text-2xl font-bold text-white mb-1" id="affordabilityRating">Moderate Risk</div>
+                    <div class="text-xl lg:text-2xl font-bold text-amber-400 mb-1" id="affordabilityRating">Moderate Risk</div>
                     <div class="text-xs text-amber-400/80 font-medium" id="etaDisplay">ETA: 3.2 Years</div>
                 </div>
             </div>
             
-            <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md flex flex-col justify-between hover:bg-white/[0.05] transition-colors cursor-default">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-slate-400 text-sm font-medium">Monthly Savings Rate</h3>
-                    <div class="p-2 bg-white/5 rounded-lg border border-white/5"><i data-lucide="trending-up" class="w-5 h-5 text-blue-400"></i></div>
+            <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md flex flex-col justify-between hover:bg-white/[0.05] transition-colors cursor-default col-span-2 lg:col-span-1">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-slate-400 text-[11px] lg:text-xs font-semibold uppercase tracking-wider">Monthly Savings</h3>
+                    <div class="p-1.5 bg-white/5 rounded-lg border border-white/5"><i data-lucide="trending-up" class="w-4 h-4 text-blue-400"></i></div>
                 </div>
                 <div>
-                    <div class="text-2xl font-bold text-white mb-1" id="monthlySavings">₹1.8L</div>
+                    <div class="text-xl lg:text-2xl font-bold text-white mb-1" id="monthlySavings">₹1.8L</div>
                     <div class="text-xs font-medium flex items-center space-x-1 text-emerald-400">
                         <i data-lucide="trending-up" class="w-3 h-3"></i><span>+12% vs last month</span>
                     </div>
@@ -183,18 +183,20 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
             <!-- Main Chart & Simulator Area -->
             <div class="lg:col-span-2 space-y-8">
                 
                 <!-- Trajectory Panel -->
-                <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md">
+                <div class="p-5 lg:p-6 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md">
                     <div class="flex justify-between items-center mb-6">
-                        <h2 class="text-lg font-semibold text-white">Wealth Trajectory & Goal Path</h2>
-                        <button class="text-xs bg-white/5 hover:bg-white/10 px-3 py-1 rounded-md transition border border-white/10">View Detailed Plan</button>
+                        <h2 class="text-lg font-semibold text-white">Wealth Trajectory</h2>
+                        <button onclick="toggleTrajectory()" class="text-xs bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-md transition border border-white/10 flex items-center">
+                            <i data-lucide="maximize-2" id="expandIcon" class="w-3 h-3 mr-1.5"></i> <span id="expandText">Expand</span>
+                        </button>
                     </div>
                     
-                    <div class="h-64 w-full relative">
+                    <div id="trajectoryGraph" class="h-56 lg:h-64 w-full relative transition-all duration-500">
                         <svg viewBox="0 0 800 300" class="w-full h-full preserve-aspect-ratio-none">
                             <line x1="0" y1="250" x2="800" y2="250" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
                             <line x1="0" y1="150" x2="800" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
@@ -203,30 +205,45 @@
                             <path d="M 0 250 C 100 240, 200 200, 300 180" fill="none" stroke="#6366f1" stroke-width="4" />
                             <circle cx="300" cy="180" r="6" fill="#6366f1" class="animate-pulse" />
                             
-                            <path d="M 300 180 C 500 140, 600 100, 800 50" fill="none" stroke="rgba(99,102,241,0.4)" stroke-width="4" stroke-dasharray="8,8" />
+                            <!-- Dynamic SVG Path & Goal -->
+                            <path id="projectedPath" d="M 300 180 C 500 140, 600 100, 800 50" fill="none" stroke="rgba(99,102,241,0.4)" stroke-width="4" stroke-dasharray="8,8" class="transition-all duration-700 ease-in-out" />
                             
-                            <circle cx="800" cy="50" r="8" fill="#10b981" />
-                            <text x="700" y="35" fill="#10b981" font-size="14" font-weight="bold" id="chartGoalLabel">Goal: ₹2.5Cr</text>
+                            <circle id="projectedGoal" cx="800" cy="50" r="8" fill="#10b981" class="transition-all duration-700 ease-in-out shadow-lg" />
+                            <text id="chartGoalLabel" x="690" y="35" fill="#10b981" font-size="14" font-weight="bold" class="transition-all duration-700 ease-in-out">Goal: ₹2.5Cr</text>
                             <text x="300" y="205" fill="#6366f1" font-size="14">Today</text>
                         </svg>
-                        
-                        <!-- Agent overlay insight -->
-                        <div class="absolute bottom-4 left-4 p-3 bg-indigo-950/80 border border-indigo-500/30 rounded-lg max-w-xs backdrop-blur-md">
-                            <div class="flex items-start space-x-2">
-                                <i data-lucide="brain-circuit" class="w-4 h-4 text-indigo-400 mt-0.5"></i>
-                                <p class="text-xs text-indigo-200">
-                                    <strong>AI Reflection:</strong> Your trajectory improved this month. You are currently on track, but vulnerable to inflation spikes.
-                                </p>
+                    </div>
+
+                    <!-- Contextual AI Insights Feed -->
+                    <div class="mt-6 pt-5 border-t border-white/10">
+                        <h3 class="text-xs font-semibold text-slate-400 mb-3 flex items-center uppercase tracking-wider"><i data-lucide="sparkles" class="w-3.5 h-3.5 mr-2 text-indigo-400"></i> AI Agent Insights</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div class="flex items-start space-x-3 bg-white/5 p-3 rounded-xl border border-white/5 hover:border-white/10 transition">
+                                <div class="bg-rose-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><i data-lucide="utensils" class="w-4 h-4 text-rose-400"></i></div>
+                                <div>
+                                    <p class="text-sm text-slate-200">Dining spend increased by <span class="text-rose-400 font-semibold">15%</span>.</p>
+                                    <p class="text-xs text-slate-400 mt-1">Adjusting this next month shaves 2 weeks off ETA.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3 bg-white/5 p-3 rounded-xl border border-white/5 hover:border-white/10 transition">
+                                <div class="bg-emerald-500/20 p-1.5 rounded-lg shrink-0 mt-0.5"><i data-lucide="arrow-down-circle" class="w-4 h-4 text-emerald-400"></i></div>
+                                <div>
+                                    <p class="text-sm text-slate-200">Loan interest rates dropped <span class="text-emerald-400 font-semibold">0.25%</span>.</p>
+                                    <p class="text-xs text-slate-400 mt-1">Trajectory updated to reflect improved borrowing capacity.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- What-If Simulator -->
-                <div class="p-6 rounded-2xl bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border border-indigo-500/20 backdrop-blur-md">
-                    <div class="flex items-center space-x-2 mb-6">
-                        <i data-lucide="sliders" class="w-5 h-5 text-indigo-400"></i>
-                        <h2 class="text-lg font-semibold text-white">What-If Simulator</h2>
+                <div class="p-5 lg:p-6 rounded-2xl bg-gradient-to-br from-indigo-900/20 to-purple-900/20 border border-indigo-500/20 backdrop-blur-md">
+                    <div class="flex justify-between items-center mb-6">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="sliders" class="w-5 h-5 text-indigo-400"></i>
+                            <h2 class="text-lg font-semibold text-white">What-If Simulator</h2>
+                        </div>
+                        <span class="px-2.5 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded border border-indigo-500/30">Live Sync</span>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -234,7 +251,7 @@
                             <div>
                                 <div class="flex justify-between mb-2">
                                     <label class="text-sm text-slate-300">Simulate Salary Change</label>
-                                    <span class="text-sm font-medium text-white" id="salaryDisplay">₹50 Lakh</span>
+                                    <span class="text-sm font-bold text-white bg-white/5 px-2 py-0.5 rounded" id="salaryDisplay">₹50 Lakh</span>
                                 </div>
                                 <input 
                                     type="range" id="salaryRange" min="30" max="150" value="50" 
@@ -246,7 +263,7 @@
                             <div>
                                 <div class="flex justify-between mb-2">
                                     <label class="text-sm text-slate-300">Expected Inflation</label>
-                                    <span class="text-sm font-medium text-white" id="inflationDisplay">6%</span>
+                                    <span class="text-sm font-bold text-white bg-white/5 px-2 py-0.5 rounded" id="inflationDisplay">6%</span>
                                 </div>
                                 <input 
                                     type="range" id="inflationRange" min="2" max="12" value="6" 
@@ -262,17 +279,17 @@
                             <p class="text-sm text-amber-400" id="simDesc">
                                 Timeline remains constrained. Risk of delay if inflation rises.
                             </p>
-                            <button class="mt-4 w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm rounded-lg transition font-medium">
-                                Apply Scenario to Plan
+                            <button class="mt-5 w-full py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-sm rounded-lg transition font-medium flex justify-center items-center">
+                                Apply Scenario to Plan <i data-lucide="check-circle" class="w-4 h-4 ml-2"></i>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Column: Milestones -->
+            <!-- Right Column: Execution Plan (Moves below on mobile automatically due to Grid) -->
             <div class="space-y-8">
-                <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md h-full">
+                <div class="p-5 lg:p-6 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md h-full">
                     <h2 class="text-lg font-semibold text-white mb-6">Execution Plan</h2>
                     
                     <div class="relative border-l-2 border-slate-800 ml-3 space-y-8" id="milestonesContainer">
@@ -289,7 +306,7 @@
     </main>
 
     <!-- Right Agent Chat Panel -->
-    <aside class="w-80 border-l border-white/10 bg-slate-900/50 backdrop-blur-2xl flex flex-col z-20 hidden xl:flex">
+    <aside class="w-80 border-l border-white/10 bg-slate-900/50 backdrop-blur-2xl flex flex-col z-20 hidden xl:flex shrink-0">
         <div class="p-5 border-b border-white/10 flex justify-between items-center bg-indigo-950/30">
             <div class="flex items-center space-x-3">
                 <div class="relative">
@@ -300,7 +317,7 @@
                 </div>
                 <div>
                     <h3 class="text-sm font-semibold text-white">LifeOS Agent</h3>
-                    <p class="text-xs text-indigo-300">Memory Active</p>
+                    <p class="text-[10px] text-indigo-300 uppercase tracking-wide">Memory Active</p>
                 </div>
             </div>
         </div>
@@ -323,7 +340,6 @@
             <div class="mt-3 flex gap-2 overflow-x-auto pb-1 hide-scrollbar">
                 <button class="whitespace-nowrap px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-[11px] font-medium text-slate-300 hover:bg-indigo-500/20 hover:text-indigo-300 hover:border-indigo-500/30 transition">Update goal</button>
                 <button class="whitespace-nowrap px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-[11px] font-medium text-slate-300 hover:bg-indigo-500/20 hover:text-indigo-300 hover:border-indigo-500/30 transition">Check affordability</button>
-                <button class="whitespace-nowrap px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-[11px] font-medium text-slate-300 hover:bg-indigo-500/20 hover:text-indigo-300 hover:border-indigo-500/30 transition">Review memory</button>
             </div>
         </div>
     </aside>
@@ -335,6 +351,8 @@
         let currentGoal = 'Buy ₹2.5Cr House in Gurgaon';
         let salarySim = 50;
         let inflationSim = 6;
+        let isSidebarCollapsed = false;
+        let isTrajectoryExpanded = false;
         const suggestedGoals = ['Buy Home', 'Car', 'Marriage', 'Child Education'];
 
         // --- DOM Elements ---
@@ -352,6 +370,11 @@
         
         const simEtaEl = document.getElementById('simEta');
         const simDescEl = document.getElementById('simDesc');
+        
+        const riskCard = document.getElementById('riskCard');
+        const riskLabel = document.getElementById('riskLabel');
+        const riskIconBg = document.getElementById('riskIconBg');
+        const riskIcon = document.getElementById('riskIcon');
         const affordabilityRatingEl = document.getElementById('affordabilityRating');
         
         const milestonesContainer = document.getElementById('milestonesContainer');
@@ -370,12 +393,12 @@
             
             // Update UI Toggles
             if(curr === 'INR') {
-                btnInr.className = "px-3 py-1 text-xs font-medium rounded-md transition bg-indigo-500 text-white shadow-md";
-                btnUsd.className = "px-3 py-1 text-xs font-medium rounded-md transition text-slate-400 hover:text-white";
+                btnInr.className = "px-4 py-1.5 text-xs font-semibold rounded-md transition bg-indigo-500 text-white shadow-md";
+                btnUsd.className = "px-4 py-1.5 text-xs font-semibold rounded-md transition text-slate-400 hover:text-white";
                 if(currentGoal.includes('$300K')) currentGoal = 'Buy ₹2.5Cr House in Gurgaon';
             } else {
-                btnUsd.className = "px-3 py-1 text-xs font-medium rounded-md transition bg-indigo-500 text-white shadow-md";
-                btnInr.className = "px-3 py-1 text-xs font-medium rounded-md transition text-slate-400 hover:text-white";
+                btnUsd.className = "px-4 py-1.5 text-xs font-semibold rounded-md transition bg-indigo-500 text-white shadow-md";
+                btnInr.className = "px-4 py-1.5 text-xs font-semibold rounded-md transition text-slate-400 hover:text-white";
                 if(currentGoal.includes('₹2.5Cr')) currentGoal = 'Buy $300K House in NY';
             }
             
@@ -395,22 +418,96 @@
             renderAll();
         }
 
+        function toggleSidebar() {
+            isSidebarCollapsed = !isSidebarCollapsed;
+            const sidebar = document.getElementById('sidebar');
+            const labels = document.querySelectorAll('.sidebar-label');
+            const icon = document.getElementById('sidebarToggleIcon');
+
+            if (isSidebarCollapsed) {
+                sidebar.classList.replace('lg:w-64', 'lg:w-20');
+                labels.forEach(l => l.classList.replace('lg:block', 'lg:hidden'));
+                icon.setAttribute('data-lucide', 'panel-left-open');
+            } else {
+                sidebar.classList.replace('lg:w-20', 'lg:w-64');
+                labels.forEach(l => l.classList.replace('lg:hidden', 'lg:block'));
+                icon.setAttribute('data-lucide', 'panel-left-close');
+            }
+            lucide.createIcons();
+        }
+
+        function toggleTrajectory() {
+            isTrajectoryExpanded = !isTrajectoryExpanded;
+            const graph = document.getElementById('trajectoryGraph');
+            const icon = document.getElementById('expandIcon');
+            const text = document.getElementById('expandText');
+
+            if (isTrajectoryExpanded) {
+                graph.classList.replace('h-56', 'h-96');
+                graph.classList.replace('lg:h-64', 'lg:h-[32rem]');
+                icon.setAttribute('data-lucide', 'minimize-2');
+                text.innerText = 'Collapse';
+            } else {
+                graph.classList.replace('h-96', 'h-56');
+                graph.classList.replace('lg:h-[32rem]', 'lg:h-64');
+                icon.setAttribute('data-lucide', 'maximize-2');
+                text.innerText = 'Expand';
+            }
+            lucide.createIcons();
+        }
+
         function updateSimulations() {
             salarySim = parseInt(salaryRange.value);
             inflationSim = parseInt(inflationRange.value);
             
+            // Update text labels
             salaryDisplay.innerText = currentCurrency === 'INR' ? `₹${salarySim} Lakh` : `$${salarySim}k`;
             inflationDisplay.innerText = `${inflationSim}%`;
 
-            if(salarySim > 65) {
+            // Calculate Dynamic Visuals for SVG Trajectory
+            // Higher salary means goal is reached earlier -> target X shifts left
+            const baseTargetX = 800;
+            const improvementFactor = Math.max(0, salarySim - 50);
+            const penaltyFactor = Math.max(0, inflationSim - 6) * 10;
+            
+            let targetX = baseTargetX - (improvementFactor * 4) + penaltyFactor;
+            targetX = Math.max(400, Math.min(800, targetX)); // Clamp within canvas
+
+            // Animate SVG path and endpoints
+            const controlPointX = 300 + (targetX - 300) / 2;
+            document.getElementById('projectedPath').setAttribute('d', `M 300 180 C ${controlPointX} 140, ${controlPointX + 50} 100, ${targetX} 50`);
+            document.getElementById('projectedGoal').setAttribute('cx', targetX);
+            document.getElementById('chartGoalLabel').setAttribute('x', targetX - (currentCurrency === 'INR' ? 85 : 75));
+
+            // Update Status Panels Based on Simulation Logic
+            if(salarySim > 65 && inflationSim < 8) {
+                // Low Risk / Emerald Theme
                 simEtaEl.innerText = "ETA: 2.5 Years";
                 simDescEl.innerText = "Affordability jumps to 92/100. You can buy 8 months earlier.";
                 simDescEl.className = "text-sm text-emerald-400";
+                
+                affordabilityRatingEl.innerText = "Low Risk";
+                affordabilityRatingEl.className = "text-xl lg:text-2xl font-bold text-emerald-400 mb-1";
+                riskCard.className = "p-4 rounded-2xl bg-emerald-900/10 border border-emerald-500/20 backdrop-blur-md flex flex-col justify-between transition-colors cursor-default col-span-1";
+                riskLabel.className = "text-emerald-500/80 text-[11px] lg:text-xs font-semibold uppercase tracking-wider";
+                riskIconBg.className = "p-1.5 bg-emerald-500/10 rounded-lg border border-emerald-500/20";
+                riskIcon.setAttribute('data-lucide', 'shield-check');
+                riskIcon.className = "w-4 h-4 text-emerald-400";
             } else {
+                // Moderate Risk / Amber Theme
                 simEtaEl.innerText = "ETA: 3.2 Years";
                 simDescEl.innerText = "Timeline remains constrained. Risk of delay if inflation rises.";
                 simDescEl.className = "text-sm text-amber-400";
+                
+                affordabilityRatingEl.innerText = "Moderate Risk";
+                affordabilityRatingEl.className = "text-xl lg:text-2xl font-bold text-amber-400 mb-1";
+                riskCard.className = "p-4 rounded-2xl bg-amber-900/10 border border-amber-500/20 backdrop-blur-md flex flex-col justify-between transition-colors cursor-default col-span-1";
+                riskLabel.className = "text-amber-500/80 text-[11px] lg:text-xs font-semibold uppercase tracking-wider";
+                riskIconBg.className = "p-1.5 bg-amber-500/10 rounded-lg border border-amber-500/20";
+                riskIcon.setAttribute('data-lucide', 'alert-circle');
+                riskIcon.className = "w-4 h-4 text-amber-400";
             }
+            lucide.createIcons();
         }
 
         // --- Render Functions ---
@@ -421,42 +518,55 @@
         }
 
         function renderAll() {
-            // Update static stats
+            // Update static stats formatting
             monthlySavingsEl.innerText = currentCurrency === 'INR' ? "₹1.8L" : "$2,100";
             chartGoalLabel.innerText = `Goal: ${currentCurrency === 'INR' ? '₹2.5Cr' : '$300K'}`;
             
-            // Sync simulators
-            salaryDisplay.innerText = currentCurrency === 'INR' ? `₹${salarySim} Lakh` : `$${salarySim}k`;
-            
+            // Re-sync simulators
             updateSimulations();
             renderMilestones();
             renderChat();
             
-            // Re-init icons for newly injected HTML
             lucide.createIcons();
         }
 
         function renderMilestones() {
             const milestones = [
                 { id: 1, title: "Initial Downpayment Saved", amount: currentCurrency === 'INR' ? "₹25L" : "$30K", status: "completed", date: "Jan 2026" },
-                { id: 2, title: "Emergency Fund Secured", amount: currentCurrency === 'INR' ? "₹10L" : "$12K", status: "completed", date: "Mar 2026" },
-                { id: 3, title: "Reach 50% Downpayment Goal", amount: currentCurrency === 'INR' ? "₹37.5L" : "$45K", status: "current", date: "Oct 2026" },
+                { id: 2, title: "Emergency Fund Secured", amount: currentCurrency === 'INR' ? "₹10L" : "$12K", status: "current", date: "Mar 2026" },
+                { id: 3, title: "Reach 50% Downpayment Goal", amount: currentCurrency === 'INR' ? "₹37.5L" : "$45K", status: "pending", date: "Oct 2026" },
                 { id: 4, title: "Pre-approved for Loan", amount: currentCurrency === 'INR' ? "₹1.75Cr" : "$210K", status: "pending", date: "Jan 2028" },
                 { id: 5, title: "Target Goal Complete", amount: currentCurrency === 'INR' ? "₹2.5Cr" : "$300K", status: "pending", date: "May 2029" },
             ];
 
             milestonesContainer.innerHTML = milestones.map(m => {
-                let dotClass = m.status === 'completed' ? 'bg-emerald-500' : 
-                               m.status === 'current' ? 'bg-indigo-500 animate-pulse' : 'bg-slate-700';
-                let titleClass = m.status === 'pending' ? 'text-slate-400' : 'text-white';
+                // Color coding and icons based on status logic requested
+                let dotClass = m.status === 'completed' ? 'bg-emerald-500 border-emerald-500' : 
+                               m.status === 'current' ? 'bg-slate-950 border-indigo-500 shadow-[0_0_12px_rgba(99,102,241,0.6)]' : 'bg-slate-900 border-slate-700';
+                
+                let iconHtml = m.status === 'completed' ? `<i data-lucide="check" class="w-3 h-3 text-slate-950"></i>` : 
+                               m.status === 'current' ? `<span class="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>` : '';
+                
+                let titleClass = m.status === 'pending' ? 'text-slate-500' : 'text-white';
+                let amountClass = m.status === 'pending' ? 'text-slate-400' : 'text-slate-200';
+                
+                // Call to action button strictly on the 'current' phase
+                let nextStepBtn = m.status === 'current' ? `
+                    <button class="mt-3 w-fit px-3 py-1.5 bg-indigo-600/10 border border-indigo-500/30 hover:bg-indigo-500/20 text-indigo-300 text-xs rounded-lg flex items-center transition">
+                        Next Step: Re-allocate funds <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i>
+                    </button>
+                ` : '';
                 
                 return `
                     <div class="relative pl-6">
-                        <span class="absolute -left-[11px] top-1 h-5 w-5 rounded-full border-4 border-slate-950 flex items-center justify-center ${dotClass}"></span>
+                        <span class="absolute -left-[11px] top-1 h-5 w-5 rounded-full border-2 flex items-center justify-center z-10 ${dotClass}">
+                            ${iconHtml}
+                        </span>
                         <div class="flex flex-col">
-                            <span class="text-xs font-semibold text-indigo-400 mb-1">${m.date}</span>
+                            <span class="text-xs font-semibold ${m.status === 'pending' ? 'text-slate-600' : 'text-indigo-400'} mb-1">${m.date}</span>
                             <h3 class="text-sm font-medium ${titleClass}">${m.title}</h3>
-                            <span class="text-xl font-bold text-slate-200 mt-1">${m.amount}</span>
+                            <span class="text-xl font-bold ${amountClass} mt-1">${m.amount}</span>
+                            ${nextStepBtn}
                         </div>
                     </div>
                 `;
